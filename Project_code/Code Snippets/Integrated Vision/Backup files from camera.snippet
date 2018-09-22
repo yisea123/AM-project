@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Backup camera files</Title>
+      <Description>Copies all files from a camera to a folder on the controller named after the camera.</Description>
+      <Author>ABB</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="RAPID"><![CDATA[PROC BackupCamToCtrl(var cameradev cam,bool replaceexistingfiles)
+        VAR string ctrldirname:="HOME/IV/";
+        VAR dir camdirectory;
+        VAR string camdirname;
+        VAR string tempfilename;
+        VAR string tempcamfilepath;
+        VAR string tempctrlfilepath;
+
+        camdirname:=CamGetName(cam)+":/";
+        ctrldirname:=ctrldirname+CamGetName(cam)+"/";
+        MakeDir ctrldirname;
+
+        OpenDir camdirectory,camdirname;
+
+        WHILE ReadDir(camdirectory,tempFileName) DO
+            tempcamfilepath:=camdirname+tempfilename;
+            tempctrlfilepath:=ctrldirname+tempfilename;
+            CopyFile tempcamfilepath,tempctrlfilepath;
+        ENDWHILE
+
+        CloseDir camdirectory;
+    ERROR
+        IF ERRNO=ERR_FILEEXIST THEN
+            IF replaceexistingfiles THEN
+                RemoveFile tempctrlfilepath;
+                RETRY;
+            ELSE
+                TRYNEXT;
+            ENDIF
+        ENDIF
+    ENDPROC]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

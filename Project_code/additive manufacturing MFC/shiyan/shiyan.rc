@@ -1,0 +1,255 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\shiyan.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\shiyan.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 shiyan"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "shiyan 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2014",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_SHIYAN_DIALOG DIALOGEX 0, 0, 565, 353
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "shiyan"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "连接",IDC_BUTTON1,82,311,56,20
+    PUSHBUTTON      "断开",IDC_BUTTON2,152,312,58,20
+    EDITTEXT        IDC_Send1,89,20,44,19,ES_AUTOHSCROLL,WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_Send2,89,49,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Send3,89,84,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Send4,176,20,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Send5,176,49,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Send6,176,84,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Recv1,89,168,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Recv2,89,197,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Recv3,89,232,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Recv4,176,168,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Recv5,176,197,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Recv6,176,232,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Send7,375,20,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Send8,375,49,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Send9,375,84,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Send10,475,20,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Send11,475,49,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Send12,475,84,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Recv7,375,168,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Recv8,375,197,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Recv9,375,232,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Recv10,475,168,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Recv11,475,197,44,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Recv12,475,232,44,19,ES_AUTOHSCROLL
+    PUSHBUTTON      "MoveToolTo",IDC_BUTTON3,5,50,47,21
+    PUSHBUTTON      "GetCalibTool",IDC_BUTTON4,5,196,55,20
+    PUSHBUTTON      "MoveJointTo",IDC_BUTTON5,288,53,50,22
+    PUSHBUTTON      "GetAng",IDC_BUTTON6,290,196,50,18
+    GROUPBOX        "输入机器人目标姿态",IDC_STATIC,63,3,200,135
+    LTEXT           "X",IDC_STATIC,79,25,12,14
+    LTEXT           "Y",IDC_STATIC,79,51,12,14
+    LTEXT           "Z",IDC_STATIC,79,88,12,14
+    LTEXT           "EX",IDC_STATIC,155,23,12,14
+    LTEXT           "EY",IDC_STATIC,155,53,12,14
+    LTEXT           "EZ",IDC_STATIC,155,89,12,14
+    LTEXT           "X",IDC_STATIC,78,171,12,14
+    LTEXT           "Y",IDC_STATIC,78,197,12,14
+    LTEXT           "Z",IDC_STATIC,78,234,12,14
+    LTEXT           "EX",IDC_STATIC,159,172,12,14
+    LTEXT           "EY",IDC_STATIC,159,202,12,14
+    LTEXT           "EZ",IDC_STATIC,159,238,12,14
+    GROUPBOX        "获取机器人目标姿态",IDC_STATIC,64,152,200,135
+    LTEXT           "J2",IDC_STATIC,362,53,12,14
+    LTEXT           "J1",IDC_STATIC,362,24,12,14
+    LTEXT           "J3",IDC_STATIC,362,88,12,14
+    LTEXT           "J2",IDC_STATIC,362,203,12,14
+    LTEXT           "J1",IDC_STATIC,362,173,12,14
+    LTEXT           "J3",IDC_STATIC,362,237,12,14
+    LTEXT           "J5",IDC_STATIC,460,55,12,14
+    LTEXT           "J4",IDC_STATIC,460,25,12,14
+    LTEXT           "J6",IDC_STATIC,460,89,12,14
+    LTEXT           "J5",IDC_STATIC,460,202,12,14
+    LTEXT           "J4",IDC_STATIC,460,172,12,14
+    LTEXT           "J6",IDC_STATIC,460,236,12,14
+    GROUPBOX        "输入机器人各关节角度",IDC_STATIC,344,2,200,135
+    GROUPBOX        "获取机器人各关节角度",IDC_STATIC,344,149,200,135
+    PUSHBUTTON      "Button7",IDC_BUTTON7,287,293,50,14
+    PUSHBUTTON      "Button8",IDC_BUTTON8,354,295,50,14
+    PUSHBUTTON      "WriteMod",IDC_WriteMod,441,295,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "shiyan.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "shiyan.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_SHIYAN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 558
+        VERTGUIDE, 167
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 346
+        HORZGUIDE, 101
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 shiyan(&A)..."
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\shiyan.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

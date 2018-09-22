@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Gundata declaration for pneumatic gun (RobotWare 5.x)</Title>
+			<Shortcut>gund</Shortcut>
+			<Description>Creates a new gundata declaration.</Description>
+			<Author>ABB</Author>
+			<SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<Default>gundata1</Default>
+					<ToolTip>The name of the new data</ToolTip>
+				</Literal>        
+			</Declarations>
+			<Code Language="RAPID">
+        <![CDATA[TASK PERS gundata $name$:=["PNEU_G1",0.05,0.02,0,0,0,10000,2,2,2];]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Gundata declaration for pneumatic gun (RobotWare 6.x)</Title>
+      <Shortcut>gund</Shortcut>
+      <Description>Creates a new gundata declaration.</Description>
+      <Author>ABB</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <Default>gundata1</Default>
+          <ToolTip>The name of the new data</ToolTip>
+        </Literal>
+      </Declarations>
+      <Code Language="RAPID">
+        <![CDATA[TASK PERS gundata $name$:=["PNEUGUN",0,1000];]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

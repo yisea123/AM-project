@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Move to detected object</Title>
+      <Description>Loads a job, requests an image and moves to the identified target.</Description>
+      <Author>ABB</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="RAPID"><![CDATA[!Change the job name
+   	CONST string myjob := "myjob.job";
+   	VAR cameratarget mycameratarget;
+   
+    !Declare robtarget, workobject, tooldata and, in case the camera is
+    !mounted on a moving part of the robot, the imaging position.  
+    !CONST robtarget myrobtarget:=[[100,200,300],[1,0,0,0],[0,0,0,0],[9E9,9E9,9E9,9E9,9E9,9E9]];
+    !CONST robtarget myimagepos:=[[100,200,300],[1,0,0,0],[0,0,0,0],[9E9,9E9,9E9,9E9,9E9,9E9]];
+    !TASK PERS wobjdata mywobj:=[FALSE,TRUE,"",[[0,0,0],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
+    !PERS tooldata mytool:=[TRUE,[[0,0,1],[1,0,0,0]],[1,[0,0,0],[1,0,0,0],0,0,0]];
+    
+   PROC MoveToDetectedObject()
+       !Change the camera name
+       CamSetProgramMode mycamera;
+       CamLoadJob mycamera, myjob;
+       CamSetRunMode mycamera;
+       
+       !If the camera is mounted on the robot, store this position during setup
+       !so that the robot may always return to this position before requesting an image.
+       !MoveL myimagepos, v100, fine, tool0;
+       
+       CamReqImage mycamera;
+       CamGetResult mycamera, mycameratarget;
+       mywobj.oframe := mycameratarget.cframe;
+       
+       !During the first cycle, run the program until this point, 
+       !then jog the tool to the desired grip position and modpos myrobtarget. 
+       MoveL myrobtarget, v100, fine, mytool \WObj:=mywobj;
+   ENDPROC]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

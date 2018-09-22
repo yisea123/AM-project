@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+ <CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+   <CodeSnippet Format="1.0.0">
+     <Header>
+      <Title>Synchronized Image Acquisition</Title>
+      <Description>CamReqImage with AwaitComplete</Description>
+      <Author>ABB</Author>
+       <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+     <Snippet>
+       <Code Language="RAPID"><![CDATA[!Make sure to initialize the camera before calling this procedure.
+    PROC CamReqImageSyncExample(VAR cameradev mycamera)
+        CONST num TRIGGER_EXTERNAL := 2;
+        VAR num triggerMode;
+        
+        CamReqImage mycamera \AwaitComplete;
+
+        ERROR
+        IF ERRNO = ERR_CAM_REQ_IMAGE THEN
+            CamGetParameter mycamera, "Acquisition.Trigger", \NumVar:=triggerMode;
+            IF(triggerMode <> TRIGGER_EXTERNAL) THEN
+                CamSetParameter mycamera, "Acquisition.Trigger", \NumVal:= TRIGGER_EXTERNAL;
+                RETRY;
+            ENDIF
+        ENDIF
+   ENDPROC]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

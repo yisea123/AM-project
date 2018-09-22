@@ -1,0 +1,45 @@
+﻿生成启动时间为 2017/6/19 13:49:09。
+     1>项目“C:\Users\jjin\Desktop\PLC-Comm\TcpipComm\TcpipComm.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>PrepareForBuild:
+         正在创建目录“C:\Users\jjin\Desktop\PLC-Comm\/Temp/Link/TcpipComm/”。
+       InitializeBuildStatus:
+         正在创建“C:\Users\jjin\Desktop\PLC-Comm\/Temp/Compile/TcpipComm/TcpipComm.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       PreBuildEvent:
+         copy "C:\Users\jjin\Desktop\PLC-Comm\TcpipComm\/TcpipComm.h" "C:\Users\jjin\Desktop\PLC-Comm\/Include/"
+         :VCEnd
+         已复制         1 个文件。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\jjin\Desktop\PLC-Comm\\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D TCPIPCOMM_EXPORTS /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"C:\Users\jjin\Desktop\PLC-Comm\/Temp/Compile/TcpipComm/TcpipComm.pch" /Fo"C:\Users\jjin\Desktop\PLC-Comm\/Temp/Compile/TcpipComm/" /Fd"C:\Users\jjin\Desktop\PLC-Comm\/Temp/Compile/TcpipComm/vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\jjin\Desktop\PLC-Comm\\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D TCPIPCOMM_EXPORTS /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\jjin\Desktop\PLC-Comm\/Temp/Compile/TcpipComm/" /Fd"C:\Users\jjin\Desktop\PLC-Comm\/Temp/Compile/TcpipComm/vc100.pdb" /Gd /TP /analyze- /errorReport:prompt dllmain.cpp
+         dllmain.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\jjin\Desktop\PLC-Comm\\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D TCPIPCOMM_EXPORTS /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"C:\Users\jjin\Desktop\PLC-Comm\/Temp/Compile/TcpipComm/TcpipComm.pch" /Fo"C:\Users\jjin\Desktop\PLC-Comm\/Temp/Compile/TcpipComm/" /Fd"C:\Users\jjin\Desktop\PLC-Comm\/Temp/Compile/TcpipComm/vc100.pdb" /Gd /TP /analyze- /errorReport:prompt TcpipComm.cpp TcpIpCommInterface.cpp
+         TcpIpCommInterface.cpp
+         TcpipComm.cpp
+         正在生成代码...
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"C:\Users\jjin\Desktop\PLC-Comm\/Temp/Compile/TcpipComm/TcpipComm.dll.embed.manifest.res" C:\Users\jjin\Desktop\PLC-Comm\/Temp/Compile/TcpipComm/TcpipComm_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\jjin\Desktop\PLC-Comm\/Temp/Link/TcpipComm/TcpipComm.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"C:\Users\jjin\Desktop\PLC-Comm\/Temp/Compile/TcpipComm/TcpipComm.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\jjin\Desktop\PLC-Comm\Temp\Link\TcpipComm\TcpipComm.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\jjin\Desktop\PLC-Comm\/Temp/Link/TcpipComm/TcpipComm.lib" /MACHINE:X86 /DLL "C:\Users\jjin\Desktop\PLC-Comm\/Temp/Compile/TcpipComm/TcpipComm.dll.embed.manifest.res"
+         "C:\Users\jjin\Desktop\PLC-Comm\/Temp/Compile/TcpipComm/dllmain.obj"
+         "C:\Users\jjin\Desktop\PLC-Comm\/Temp/Compile/TcpipComm/stdafx.obj"
+         "C:\Users\jjin\Desktop\PLC-Comm\/Temp/Compile/TcpipComm/TcpipComm.obj"
+         "C:\Users\jjin\Desktop\PLC-Comm\/Temp/Compile/TcpipComm/TcpIpCommInterface.obj"
+            正在创建库 C:\Users\jjin\Desktop\PLC-Comm\/Temp/Link/TcpipComm/TcpipComm.lib 和对象 C:\Users\jjin\Desktop\PLC-Comm\/Temp/Link/TcpipComm/TcpipComm.exp
+     1>TcpIpCommInterface.obj : error LNK2019: 无法解析的外部符号 __imp__WSAResetEvent@4，该符号在函数 "unsigned int __stdcall AGVCaptureThread(void *)" (?AGVCaptureThread@@YGIPAX@Z) 中被引用
+     1>TcpIpCommInterface.obj : error LNK2019: 无法解析的外部符号 __imp__WSAEventSelect@12，该符号在函数 "public: virtual bool __thiscall TcpIpCommInterface::Init(void)" (?Init@TcpIpCommInterface@@UAE_NXZ) 中被引用
+     1>TcpIpCommInterface.obj : error LNK2019: 无法解析的外部符号 __imp__WSACreateEvent@0，该符号在函数 "public: virtual bool __thiscall TcpIpCommInterface::Init(void)" (?Init@TcpIpCommInterface@@UAE_NXZ) 中被引用
+     1>TcpIpCommInterface.obj : error LNK2019: 无法解析的外部符号 __imp__connect@12，该符号在函数 "public: virtual bool __thiscall TcpIpCommInterface::Init(void)" (?Init@TcpIpCommInterface@@UAE_NXZ) 中被引用
+     1>TcpIpCommInterface.obj : error LNK2019: 无法解析的外部符号 __imp__htons@4，该符号在函数 "public: virtual bool __thiscall TcpIpCommInterface::Init(void)" (?Init@TcpIpCommInterface@@UAE_NXZ) 中被引用
+     1>TcpIpCommInterface.obj : error LNK2019: 无法解析的外部符号 __imp__inet_addr@4，该符号在函数 "public: virtual bool __thiscall TcpIpCommInterface::Init(void)" (?Init@TcpIpCommInterface@@UAE_NXZ) 中被引用
+     1>TcpIpCommInterface.obj : error LNK2019: 无法解析的外部符号 __imp__socket@12，该符号在函数 "public: virtual bool __thiscall TcpIpCommInterface::Init(void)" (?Init@TcpIpCommInterface@@UAE_NXZ) 中被引用
+     1>TcpIpCommInterface.obj : error LNK2019: 无法解析的外部符号 __imp__WSACleanup@0，该符号在函数 "public: virtual bool __thiscall TcpIpCommInterface::Init(void)" (?Init@TcpIpCommInterface@@UAE_NXZ) 中被引用
+     1>TcpIpCommInterface.obj : error LNK2019: 无法解析的外部符号 __imp__WSAStartup@8，该符号在函数 "public: virtual bool __thiscall TcpIpCommInterface::Init(void)" (?Init@TcpIpCommInterface@@UAE_NXZ) 中被引用
+     1>TcpIpCommInterface.obj : error LNK2019: 无法解析的外部符号 __imp__send@16，该符号在函数 "public: virtual void __thiscall TcpIpCommInterface::SendMsg(char *)" (?SendMsg@TcpIpCommInterface@@UAEXPAD@Z) 中被引用
+     1>TcpIpCommInterface.obj : error LNK2019: 无法解析的外部符号 __imp__recv@16，该符号在函数 "public: virtual void __thiscall TcpIpCommInterface::Receive(void)" (?Receive@TcpIpCommInterface@@UAEXXZ) 中被引用
+     1>C:\Users\jjin\Desktop\PLC-Comm\/Temp/Link/TcpipComm/TcpipComm.dll : fatal error LNK1120: 11 个无法解析的外部命令
+     1>已完成生成项目“C:\Users\jjin\Desktop\PLC-Comm\TcpipComm\TcpipComm.vcxproj”(rebuild 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:01.82

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Module header</Title>
+      <Shortcut>header</Shortcut>
+			<Description>Creates a module header.</Description>
+			<Author>ABB</Author>
+			<SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <Default>myModule</Default>
+          <ToolTip>Replace with your module name</ToolTip>
+        </Literal>
+        <Literal>
+          <ID>version</ID>
+          <Default>1.0</Default>
+          <ToolTip>Replace with your version number</ToolTip>
+        </Literal>
+        <Literal>
+          <ID>theDescription</ID>
+          <Default>-</Default>
+          <ToolTip>Add a description of your module</ToolTip>
+        </Literal>
+        <Literal>
+          <ID>date</ID>
+          <Default>-</Default>
+          <ToolTip>Replace with the date of module creation</ToolTip>
+        </Literal>
+        <Literal>
+          <ID>author</ID>
+          <Default>-</Default>
+          <ToolTip>Replace with your name</ToolTip>
+        </Literal>
+      </Declarations>
+      
+			<Code Language="RAPID">
+        <![CDATA[!*****************************************************
+!Module Name: $name$
+!Version:     $version$
+!Description: $theDescription$ 
+!Date:        $date$
+!Author:      $author$
+!*****************************************************
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Tooldata declaration</Title>
+			<Shortcut>toold</Shortcut>
+			<Description>Creates a new tooldata declaration.</Description>
+			<Author>ABB</Author>
+			<SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<Default>myTool</Default>
+					<ToolTip>The name of the new tooldata</ToolTip>
+				</Literal>        
+			</Declarations>
+			<Code Language="RAPID">
+        <![CDATA[PERS tooldata $name$:=[TRUE,[[0,0,1],[1,0,0,0]],[1,[0,0,0],[1,0,0,0],0,0,0]];
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

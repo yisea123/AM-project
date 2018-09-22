@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Restore camera files</Title>
+      <Description>Copies all .job and .cxd files from a folder on the controller to the camera.</Description>
+      <Author>ABB</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="RAPID"><![CDATA[PROC RestoreCtrlToCamera(var cameradev cam,bool replaceexistingfiles)
+        VAR string ctrldirname:="HOME:/IV/";
+        VAR dir ctrldirectory;
+        VAR string camdirname;
+        VAR string tempfilename;
+        VAR string tempcamfilepath;
+        VAR string tempctrlfilepath;
+        VAR bool oktocopy:=FALSE;
+
+        camdirname:=CamGetName(cam)+":/";
+        ctrldirname:=ctrldirname+CamGetName(cam)+"/";
+        OpenDir ctrldirectory,ctrldirname;
+
+        WHILE ReadDir(ctrldirectory,tempfilename) DO
+            !Only copy .job and .cxd files
+            IF ((StrMatch(tempfilename,1,".job")<=strlen(tempfilename))OR (StrMatch(tempfilename,1,".cxd")<=strlen(tempfilename)))AND tempfilename<>"."AND tempfilename<>".." THEN
+                oktocopy:=TRUE;
+            ELSE
+                oktocopy:=FALSE;
+            ENDIF
+
+            IF oktocopy THEN
+                tempcamfilepath:=camdirname+tempfilename;
+                tempctrlfilepath:=ctrldirname+tempfilename;
+                CopyFile tempctrlfilepath,tempcamfilepath;
+            ENDIF
+        ENDWHILE
+
+        CloseDir ctrldirectory;
+    ERROR
+        IF ERRNO=ERR_FILEEXIST THEN
+            IF replaceexistingfiles THEN
+                RemoveFile tempcamfilepath;
+                RETRY;
+            ELSE
+                TRYNEXT;
+            ENDIF
+        ENDIF
+    ENDPROC]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

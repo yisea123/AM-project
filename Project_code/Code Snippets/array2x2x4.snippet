@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Array of num, 2x2x4</Title>
+      <Shortcut></Shortcut>
+      <Description>Creates a declaration of a num array of three dimensions. The size is 2x2x4.</Description>
+      <Author>ABB</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <Default>myNumArray2x2x4</Default>
+          <ToolTip>The name of the array</ToolTip>
+        </Literal>
+      </Declarations>
+      <Code Language="RAPID">
+        <![CDATA[
+VAR num $name${2,2,4}:=[[[1,2,3,4],[1,2,3,4]],[[1,2,3,4],[1,2,3,4]]];]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Procedure with parameters</Title>			
+			<Description>Creates a new procedure with parameters.</Description>
+			<Author>Niklas Skoglund</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>	
+			<Code Language="RAPID">
+        <![CDATA[!**************************************************************************************************************************************************
+! Description: 
+! 	This is an example procedure. 
+! 	It is not very useful but shows how to use parameters. 
+!
+!Parameters:
+!	\switch doThis|doThat	-	Pair of optional mutual exclusive switches that controls if "this" or "that" should be done by this procedure.
+!
+!	INOUT numRepeats		-	The number of repetitions wanted. The actual number is returned.
+!
+!	num datalist{*}			-	A one dimensional array of num that describes some data.
+!
+!**************************************************************************************************************************************************
+PROC myProcedure(\switch doThis | switch doThat, INOUT num numRepeats, PERS num dataList{*})
+
+ENDPROC]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

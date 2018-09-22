@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Seamdata declaration</Title>
+			<Shortcut>seamd</Shortcut>
+			<Description>Creates a new seamdata declaration.</Description>
+			<Author>ABB</Author>
+			<SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<Default>sm</Default>
+					<ToolTip>The name of the new data</ToolTip>
+				</Literal>        
+			</Declarations>
+			<Code Language="RAPID">
+        <![CDATA[TASK PERS seamdata $name$:=[0.2,0.05,[0,0,0,0,0,0,0,0,0],0,0,0,0,0,[0,0,0,0,0,0,0,0,0],0,0,[0,0,0,0,0,0,0,0,0],0.1,0,[0,0,0,0,0,0,0,0,0],0.05];]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

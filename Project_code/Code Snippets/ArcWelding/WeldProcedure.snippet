@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Weld Procedure</Title>
+      <Shortcut>weldproc</Shortcut>
+      <Description>Creates a new weld procedure.</Description>
+      <Author>ABB</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Code Language="RAPID">
+<![CDATA[
+!**************************************************************************************************************************************************
+! Description: 
+! 	<Add your description here>
+!**************************************************************************************************************************************************
+PROC Weld_Example()
+  ArcLStart p1,v1000,sm,wd,fine,tWeldGun\WObj:=obStn1\SeamName:="Weld_Example";
+  ArcL p2,v100,sm,wd,z1,tWeldGun\WObj:=obStn1;
+  ArcL p3,v100,sm,wd,z1,tWeldGun\WObj:=obStn1;
+  ArcLEnd p4,v100,sm,wd,fine,tWeldGun\WObj:=obStn1;
+ENDPROC]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
